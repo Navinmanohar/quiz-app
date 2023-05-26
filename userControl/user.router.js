@@ -4,10 +4,11 @@ const quisesData=require('../db/Quizes')
 const {userLoginHndler,userSignHandler}=require("./userControl")
 const login=express.Router();
 const signup=express.Router();
+// const home=express.Router();
 
-routor.route('/').get((req,res)=>{
-    res.send("hello world!")
-})
+// home.route('/').get((req,res)=>{
+//     res.send("hello world!")
+// })
 routor.route('/')
 .get((req,res)=>{
     res.json(quisesData.data);
