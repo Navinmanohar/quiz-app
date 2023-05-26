@@ -7,7 +7,7 @@ const pageNotefound=require("./midleware/pageNotefound");
 
 
 app.use(express.json()); //function for  use json data
-
+app.use('/',routor)
 app.use('/quiz',routor);  //this for question comes from router
 
 app.use('/auth/login',login) // this for login detail
