@@ -20,4 +20,4 @@ login.route('/').post(userLoginHndler)
 signup.route('/').post(userSignHandler)
 
     
-module.exports={login,signup,routor};
+module.exports={login,signup,routor };
