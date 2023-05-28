@@ -1,18 +1,15 @@
 const express=require("express")
 const app=express();
- const quizes=require("./db/Quizes")
  const port=process.env.PORT||3000;
-const {login,signup,routor}=require("./userControl/user.router")
+const {login,signup,quizdata,routor}=require("./userControl/user.router")
 const pageNotefound=require("./midleware/pageNotefound");
-const home=express.Router();
+
 
 app.use(express.json()); //function for  use json data
 
-
-home.route('/').get((req,res)=>{
-    res.send("hello world!")
-})
-app.use('/quiz',routor);  //this for question comes from router
+app.use('/',routor) //this is for home page
+    
+app.use('/quiz',quizdata);  //this for question comes from router
 
 app.use('/auth/login',login) // this for login detail
 app.use('/auth/signup',signup) // this for login detail

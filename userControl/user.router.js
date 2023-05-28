@@ -1,15 +1,15 @@
 const express=require('express')
-const routor=express.Router();
+const quizdata=express.Router();
 const quisesData=require('../db/Quizes')
 const {userLoginHndler,userSignHandler}=require("./userControl")
 const login=express.Router();
 const signup=express.Router();
-// const home=express.Router();
+const routor=express.Router();
 
-// home.route('/').get((req,res)=>{
-//     res.send("hello world!")
-// })
-routor.route('/')
+routor.route('/').get((req,res)=>{
+    res.send("hello world!")
+})
+quizdata.route('/')
 .get((req,res)=>{
     res.json(quisesData.data);
 })
@@ -20,4 +20,4 @@ login.route('/').post(userLoginHndler)
 signup.route('/').post(userSignHandler)
 
     
-module.exports={login,signup,routor };
+module.exports={login,signup,quizdata,routor};
