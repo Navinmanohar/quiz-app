@@ -7,6 +7,32 @@ const Quizes = {
       catogary: "Math",
       title: "Math",
       images: "",
+      discriptio:"this math question so youc can vist requlary for practice and test your mind",
+      questions: [
+        {
+          id: uuid(),
+          question: "x+y=?,if x^2+y^2=25 and xy=24",
+          option1: { id: uuid(), value: 7, isQurect: true },
+          option2: { id: uuid(), value: 5, isQurect: false },
+          option3: { id: uuid(), value: 9, isQurect: false },
+          option4: { id: uuid(), value: 4, isQurect: false },
+        },
+        {
+          id: uuid(),
+          question: "x+y=?,if x^2+y^2=25 and xy=24",
+          option1: { id: uuid(), value: 7, isQurect: true },
+          option2: { id: uuid(), value: 5, isQurect: false },
+          option3: { id: uuid(), value: 9, isQurect: false },
+          option4: { id: uuid(), value: 4, isQurect: false },
+        },
+      ]
+    },
+    {
+      id: uuid(),
+      catogary: "bio",
+      title: "bio",
+      images: "",
+      discriptio:"this math question so youc can vist requlary for practice and test your mind",
       questions: [
         {
           id: uuid(),
